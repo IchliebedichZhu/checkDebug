@@ -1,0 +1,20 @@
+{
+  "name": "check-code-vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "debug",
+    "check",
+    "javascript",
+    "vue"
+  ],
+  "author": "Jeremy Yu",
+  "license": "MIT",
+  "devDependencies": {
+    "rollup": "^2.55.1"
+  }
+}

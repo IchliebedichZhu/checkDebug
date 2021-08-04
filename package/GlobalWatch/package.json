@@ -1,0 +1,21 @@
+{
+  "name": "check-code-js",
+  "version": "1.0.0",
+  "description": "Jeremy Yu",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "rollup --config ./rollup.config.js"
+  },
+  "keywords": [
+    "debug",
+    "check",
+    "tag",
+    "javascript"
+  ],
+  "author": "Jeremy Yu",
+  "license": "MIT",
+  "devDependencies": {
+    "rollup": "^2.55.1"
+  }
+}
