@@ -10,7 +10,8 @@ const globalRollup = {
   input: path.resolve(__dirname, 'index.ts'),
   output: {
     file: path.resolve(__dirname, 'dist', 'index.js'),
-    format: 'iife',
+    name: 'handleWatch',
+    format: 'umd',
     plugins: [terser()],
   },
   plugins: [tsplugin(), babelplugin()],
