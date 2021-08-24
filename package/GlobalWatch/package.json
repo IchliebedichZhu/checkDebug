@@ -1,6 +1,6 @@
 {
   "name": "check-code-js",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Jeremy Yu",
   "main": "./dist/index.js",
   "scripts": {
@@ -16,6 +16,7 @@
   "author": "Jeremy Yu",
   "license": "MIT",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^20.0.0",
     "@types/vue": "^2.0.0",
     "rollup": "^2.55.1"
   },
