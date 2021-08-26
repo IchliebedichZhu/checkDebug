@@ -1,18 +1,29 @@
 import { errorHandle } from './vueError';
 import Logger from '../API';
 
+type handleErrorFun = (
+  event: string | Event,
+  source: string,
+  line: number,
+  column: number,
+  error: Error
+) => void;
+
 export type ErrParams = {
   key: string;
   baseUrl?: string;
+  handleError?: handleErrorFun;
 };
 
 export class WindowError {
   public key: string;
   public logger: Logger;
+  public handleError?: handleErrorFun;
 
-  constructor({ key, baseUrl }: ErrParams) {
+  constructor({ key, baseUrl, handleError }: ErrParams) {
     this.key = key;
     this.logger = new Logger(key, baseUrl);
+    this.handleError = handleError;
   }
 
   public start(isPrintLog: boolean) {
@@ -40,6 +51,9 @@ export class WindowError {
         column,
         error: error.message,
       });
+      if (this.handleError) {
+        this.handleError(event, source, line, column, error);
+      }
     };
   }
 }
